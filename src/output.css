@@ -192,6 +192,9 @@
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -357,6 +360,11 @@
     &:active {
       width: 290px;
       height: 290px;
+    }
+  }
+  .active\:stroke-pink-500 {
+    &:active {
+      stroke: var(--color-pink-500);
     }
   }
   .active\:text-\[15px\] {
