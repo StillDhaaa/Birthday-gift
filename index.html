@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthday Gift</title>
     <link href="./src/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
 
-  <body>
+  <body class="overflow-hidden">
     <!-- Content Before -->
     <div
       class="flex h-screen flex-col items-center justify-center transition-opacity duration-500"
       id="main"
     >
-      <div class="fixed top-[8%] text-center text-4xl select-none">
+      <div class="fixed top-[8%] z-1 text-center text-4xl select-none">
         How old are you?<br /><span id="count">0</span>
       </div>
       <svg
@@ -54,13 +55,20 @@
       >
         see my letter here
       </div>
+      <a
+        href="https://instagram.com/still.dhaaa"
+        class="animate-fadeup absolute top-[80%] z-10 mt-1.5 hidden flex-row rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 pt-1 pr-5 pb-1 pl-5 text-white"
+        id="wm"
+      >
+        <i data-feather="instagram" class="mt-[2px] mr-0.5"></i>still.dhaaa
+      </a>
     </div>
     <!-- Letter -->
     <div
-      class="absolute top-0 left-0 -z-2 m-2 flex h-screen w-screen items-center justify-center transition-opacity duration-500 ease-in-out"
+      class="absolute top-0 left-0 -z-2 flex h-screen w-screen items-center justify-center transition-opacity duration-500 ease-in-out"
     >
       <div
-        class="hidden w-100 rounded-4xl bg-[#ec7fa9] p-4 text-justify text-[#ffedfa] decoration-solid decoration-1"
+        class="mr-2 ml-2 hidden w-100 rounded-4xl bg-[#ec7fa9] p-4 text-justify text-[#ffedfa] decoration-solid decoration-1"
         id="text"
       >
         <p class="m-1 text-center decoration-0">Hello, [siapa njrit]👋</p>
@@ -76,5 +84,8 @@
     </div>
   </body>
   <script src="./src/script.js"></script>
+  <script>
+    feather.replace();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </html>

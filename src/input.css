@@ -1,1 +1,24 @@
 @import "tailwindcss";
+@layer utilities {
+}
+
+/* If you want to apply overflow-x-hidden to body, use @layer base */
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+@theme {
+  --animate-fadeup: fadeup 1s ease-in-out;
+  @keyframes fadeup {
+    0% {
+      translate: 0px 20px;
+      opacity: 0%;
+    }
+    100% {
+      translate: 0px 0px;
+      opacity: 100%;
+    }
+  }
+}
