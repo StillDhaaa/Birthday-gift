@@ -11,14 +11,16 @@ const wrapGif = document.getElementById("wrapGif");
 const wm = document.getElementById("wm");
 
 btn.addEventListener("click", () => {
-  if (counter < 17) {
+  if (counter < 16) {
     counter++;
     counts.textContent = counter;
   } else {
+    counts.textContent = 17;
     main.classList.add("opacity-0");
     setTimeout(() => {
       main.classList.remove("flex");
       main.classList.add("hidden");
+      gif.classList.remove("hidden");
     }, 500);
     confetti({
       particleCount: 150,
